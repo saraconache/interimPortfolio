@@ -11,6 +11,7 @@
         	<h1><a href="index.php">Sarah V G&oacute;mez</a> | <span>selected works</span></h1>
 		<nav>
 			<a href="">Resume</a>
+			<a href="http://bit.do/svgportfolioextended">More works</a>
 			<a href="contact.php">Contact</a>
 		</nav>
         </header>
