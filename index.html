@@ -4,19 +4,42 @@
 		<meta charset="utf-8">
 		<title>Sarah V Gómez</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- <link rel="stylesheet"  href="styles.css"> -->
+		<link rel="stylesheet"  href="styles.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/min/tiny-slider.js"></script>
 	</head>
 	<body>
-
+<div id="wrapper">
         <header>
         	<h1>Sarah Gomez</h1>
 	        <h2>Professional works</h2>
         </header>
         <div class="my-slider">
-		<div></div>
-		<div></div>
-		<div></div>
+		<div><img src="images/Branding_AFCC.png" alt="Logo Proposal for AFCC"></div>
+		<div><img src="images/Branding_mynte.png" alt=""></div>
+		<div><img src="images/Webddesign_DKKI.png" alt=""></div>
+		<div><img src="images/Webdesign_peachnteal.png" alt=""></div>
 	      </div>
+
+	</div>
+	      <script>
+		var slider = tns({
+		  container: '.my-slider',
+		  items: 1,
+		  responsive: {
+		    640: {
+		      edgePadding: 20,
+		      gutter: 20,
+		      items: 2
+		    },
+		    700: {
+		      gutter: 30
+		    },
+		    900: {
+		      items: 3
+		    }
+		  }
+		});
+	      </script>
 	</body>
 </html>
