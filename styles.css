@@ -2,20 +2,47 @@
 *, *::before, *::after{
     box-sizing:border-box;
 }
+
 body{
     margin: 0;
+    padding: 0;
     width: 100%;
-    /* overflow: hidden; */
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
 }
 img{
     height: 100%;
 }
-
-header{
-    margin: 3rem 3rem;
+a{
+    text-decoration: none;
+    color: #444;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
 }
-h1, h2{
-    font-family: 'Rajdhani', sans-serif;
+
+nav > a{
+    margin: 0 1rem;
+    transition: color 0.3s ease-in-out;
+}
+nav > a:hover{
+    color: #ccc;
+}
+header{
+    margin: auto 3rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+main{
+    display: flex;
+    justify-items: stretch;
+    flex-direction: column;
+    flex: 1;
+}
+h1, span{
     font-size: 1.2rem;
     display: inline;
 }
@@ -23,20 +50,35 @@ h1{
     letter-spacing: 5px;
     color: #444;
 }
-h2{
+span{
     font-weight: 300;
     color: #888;
+}
+footer{
+    font-size: 0.7rem;
+    color: #ccc;
+    text-align: right;
+    margin-right: 3rem;
+}
+.contact{
+    text-align: center;
+    height: 25rem;
+    display: grid;  
+}
+.contact section{
+    margin: auto;
+
 }
 
 
 /* Slideshow container */
-.blog-slider__container {
-    max-width: 80%;
+.workContainer {
+    max-width: 1000px;
     position: relative;
     margin: auto;
-    height: 60vh;
+    height: auto;
   }
-  .blog-slider__container .blogSlides img {
+  .workContainer .slides img {
     object-fit: contain;
     width: 100%;
     height: 60vh;
@@ -72,30 +114,29 @@ h2{
   }
   
   /* Caption text */
-  .blog-slider__text {
-    color: #f2f2f2;
+  .caption {
+    color: #777;
     font-size: 15px;
     padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
+    /* position: absolute; */
+    /* bottom: -40px; */
     width: 100%;
     text-align: center;
   }
   
-  /* Number text (1/3 etc) */
-  /* .blog-slider__numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  } */
-  
-  /* The dots/bullets/indicators */
-  .blogSlider__dots {
-    text-align: center;
+  .caption::before{
+      content:"[ ";
   }
-  .blogSlider__dots--dot {
+  .caption::after{
+    content:" ]";
+}
+  /* The dots/bullets/indicators */
+  .dotsContainer {
+    text-align: center;
+    width: 100%;
+   
+  }
+  .dotsContainer--dot {
     cursor: pointer;
     height: 10px;
     width: 10px;
@@ -107,7 +148,7 @@ h2{
   }
   
   .active,
-  .blogSlider__dots--dot:hover {
+  .dotsContainer--dot:hover {
     background-color: #717171;
   }
   
